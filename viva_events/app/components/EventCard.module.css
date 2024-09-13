@@ -1,0 +1,168 @@
+/* components/EventCard.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.poppins-thin {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Aumenta o arredondamento das bordas */
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Intensifica a sombra para um efeito mais moderno */
+    background-color: #E1E1E1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 300px; /* Define uma largura fixa para tornar os cards quadrados */
+    height: 300px; /* Define a altura para que os cards sejam quadrados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    font-family: 'Poppins', sans-serif; /* Define a fonte Poppins e uma fonte genérica alternativa */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Adiciona um efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
+}
+
+.title {
+    margin: 0 0 16px; /* Ajusta a margem inferior para mais espaçamento */
+    font-size: 1.25em; /* Ajusta o tamanho da fonte para um aspecto mais moderno */
+    color: #333; /* Muda a cor do texto para um tom mais escuro e legível */
+    font-family: 'Poppins', sans-serif; /* Garante que a fonte Poppins seja usada para os títulos */
+}
+
+.eventContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px; /* Aumenta o espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.button {
+    margin-top: auto; /* Empurra o botão para baixo */
+    padding: 12px 24px; /* Ajusta o preenchimento para um botão maior */
+    font-size: 16px;
+    color: #fff;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 8px; /* Aumenta o arredondamento para um estilo mais moderno */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer; /* Adiciona um cursor pointer para indicar que é clicável */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave */
+    font-family: 'Poppins', sans-serif; /* Garante que a fonte Poppins seja usada nos botões */
+}
+
+.button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05); /* Adiciona um efeito de aumento ao passar o mouse */
+}

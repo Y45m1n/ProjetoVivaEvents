@@ -1,10 +1,10 @@
-// app/eventos/criareventos.js
 'use client';
 
 import { useState } from 'react';
-import styles from '/projetos4termo/ProjetosNodeReact/ProjetoVivaEvents/viva_events/app/page.module.css'; // Certifique-se de que este arquivo CSS está no mesmo diretório
+import styles from '@/app/logincola/page.module.css';
 
 export default function CriarEventoPage() {
+  const [protocolo, setProtocolo] = useState('');
   const [nome, setNome] = useState('');
   const [datafim, setDatafim] = useState('');
   const [localizacao, setLocalizacao] = useState('');
@@ -16,7 +16,7 @@ export default function CriarEventoPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const evento = { nome, datafim, localizacao, descricao, categoria };
+    const evento = { protocolo, nome, datafim, localizacao, descricao, categoria };
 
     try {
       const response = await fetch('/api/eventos/register', {
@@ -33,6 +33,7 @@ export default function CriarEventoPage() {
         setSuccess('Evento criado com sucesso!');
         setError(null);
         // Limpar os campos após o sucesso, se desejar
+        setProtocolo('');
         setNome('');
         setDatafim('');
         setLocalizacao('');
@@ -54,6 +55,16 @@ export default function CriarEventoPage() {
       {success && <p className={styles.success}>{success}</p>}
       {error && <p className={styles.error}>{error}</p>}
       <form onSubmit={handleSubmit} className={styles.form}>
+        <label htmlFor="protocolo">
+          Protocolo:
+          <input
+            type="text"
+            id="protocolo"
+            value={protocolo}
+            onChange={(e) => setProtocolo(e.target.value)}
+            required
+          />
+        </label>
         <label htmlFor="nome">
           Nome:
           <input

@@ -1,7 +1,4 @@
-// components/EventCard.js
-
-import styles from './EventCard.module.css'; // Certifique-se de que o caminho esteja correto
-
+import styles from '../components/EventCard.module.css'; 
 export default function EventCard({ evento }) {
   return (
     <div className={styles.card}>

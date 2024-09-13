@@ -1,29 +1,23 @@
 import Evento from "@/models/Evento";
-import connectMongo from "@/utils/dbConnect";
+import connectMongo from "@/utils/mongodb";
 
-// Função para obter todos os eventos ou eventos específicos
-export const getEventos = async (filters = {}) => {
+// Função para obter eventos por protocolo
+export const getEventoByProtocolo = async (protocolo) => {
     await connectMongo();
-    return await Evento.find(filters);
-}
-
-// Função para criar um novo evento
-export const createEvento = async (data) => {
-    await connectMongo();
-    return await Evento.create(data);
+    return await Evento.findOne({ protocolo });
 }
 
 // Função para atualizar um evento existente
-export const updateEvento = async (id, data) => {
+export const updateEvento = async (protocolo, data) => {
     await connectMongo();
-    return await Evento.findByIdAndUpdate(id, data, {
+    return await Evento.findOneAndUpdate({ protocolo }, data, {
         new: true,
         runValidators: true
     });
 }
 
 // Função para deletar um evento
-export const deleteEvento = async (id) => {
+export const deleteEvento = async (protocolo) => {
     await connectMongo();
-    return await Evento.findByIdAndDelete(id);
+    return await Evento.findOneAndDelete({ protocolo });
 }

@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from '/projetos4termo/ProjetosNodeReact/ProjetoVivaEvents/viva_events/app/page.module.css'; 
+import styles from '../logincola/page.module.css'; 
 
 export default function LoginColaboradorPage() {
   const [email, setEmail] = useState('');

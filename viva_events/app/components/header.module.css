@@ -1,0 +1,74 @@
+/* components/Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #003D6B;
+  border-bottom: 1px solid #eaeaea;
+  width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.logoContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4A90E2;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave no hover */
+}
+
+.button:hover {
+  background-color: #357ABD; /* Mudança de cor no hover para diferenciar */
+}
+
+/* Novo CSS para o footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #004080, #003D6B); /* Gradiente para um efeito moderno */
+  color: #fff;
+  border-top: 2px solid #eaeaea;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito de elevação */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footerLeft {
+  text-align: left;
+  font-size: 14px; /* Ajusta o tamanho da fonte */
+}
+
+.footerLeft p {
+  margin: 0; /* Remove margem padrão */
+  line-height: 1.5; /* Melhora a legibilidade do texto */
+}
+
+.footerRight {
+  text-align: right;
+}
+
+.footerRight img {
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção */
+  border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar a imagem */
+}

@@ -1,10 +1,10 @@
-// app/page.js
-'use client'; // Adicione esta linha no início do arquivo
+'use client'; 
 
-import Header from '../app/header';
+import Header from '../app/components/header';
 import styles from './page.module.css';
-import EventCard from '../app/EventCard';
+import EventCard from '../app/components/EventCard';
 import { useEffect, useState } from 'react';
+import Footer from './components/footer';
 
 export default function Home() {
   const [eventos, setEventos] = useState([]);
@@ -29,17 +29,21 @@ export default function Home() {
   if (loading) return <p>Carregando...</p>;
 
   return (
-    <div className={styles.page}>
+    <>
       <Header />
-      <main className={styles.main}>
-        <h1>Eventos</h1>
-        <div className={styles.eventContainer}>
-          {eventos.map((evento) => (
-            <EventCard key={evento._id} evento={evento} />
-          ))}
-        </div>
-        <a href="/logincola" className={styles.button}>Login colaborador</a>
-      </main>
-    </div>
+      <div className={styles.page}>
+        <main className={styles.main}>
+          <h1>Eventos</h1>
+          <div className={styles.eventContainer}>
+            {eventos.map((evento) => (
+              <EventCard key={evento._id} evento={evento} />
+            ))}
+          </div>
+          <div className={styles.loginCard}>
+            <a href="/logincola" className={styles.button}>Login colaborador</a>
+          </div>
+        </main>
+      </div>
+      <Footer /></>
   );
 }

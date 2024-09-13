@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Styles from '@/app/logincola/page.module.css'
 
 export default function LoginUsuarioPage() {
   const [email, setEmail] = useState('');

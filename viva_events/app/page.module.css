@@ -1,3 +1,6 @@
+/* page.module.css */
+
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -11,7 +14,7 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
+  
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
@@ -32,6 +35,10 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main ol {
@@ -89,21 +96,70 @@ a.secondary {
   min-width: 180px;
 }
 
-.footer {
-  grid-row-start: 3;
+/* Novo CSS para o card de login colaborador */
+.loginCard {
+  background: #E1E1E1; /* Fundo branco para o card */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   display: flex;
-  gap: 24px;
+  justify-content: center; /* Centraliza o botão dentro do card */
+  width: 800px; /* Largura fixa do card */
 }
 
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.loginCard .button {
+  background: #4A5D23; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  padding: 15px 25px; /* Espaçamento interno do botão */
+  font-size: 18px; /* Tamanho da fonte do botão */
 }
 
-.footer img {
-  flex-shrink: 0;
+.loginCard .button:hover {
+  background: #2c3715; /* Cor de fundo do botão ao passar o mouse */
 }
+
+/* page.module.css */
+
+/* ...seus estilos existentes... */
+
+.eventContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define a largura mínima dos cartões e permite que eles se ajustem automaticamente */
+  gap: 16px; /* Espaçamento entre os cartões */
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima para não esticar demais em telas grandes */
+}
+
+.eventCard {
+  background: #E1E1E1; /* Cor de fundo dos cartões de evento */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Exemplo de estilo do botão no card, caso precise */
+.eventCard .button {
+  background: #4A5D23;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.eventCard .button:hover {
+  background: #2e3a16;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .eventCard .button:hover {
+    background: #2e3a16;
+  }
+}
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
