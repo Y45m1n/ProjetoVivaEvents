@@ -70,10 +70,9 @@ Para quem organiza eventos, oferecemos ferramentas práticas para criar, gerenci
 ### RECURSOS:
 - React Framework
 - Node.js
-- Express
 - MongoDB Database
 - Visual Studio Code
-- Excel (Cronograma)
+- Canva (Cronograma)
 - Miro/Draw.io (Diagramas)
 - Figma (Prototipagem)
 - Git/GitHub
